@@ -7,7 +7,7 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  justify-content: space-around;
 
   header {
     width: fit-content;
@@ -17,6 +17,31 @@
   main {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 3em;
+  }
+}
+
+.contadores {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 2vh;
+}
+
+.contador-disponiveis,
+.contador-indisponiveis {
+  h2 {
+    display: flex;
+    font-size: 1.3em;
+    gap: 0.3em;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: -1px;
+    align-self: flex-end;
+  }
+
+  .numero {
+    font-size: 2.2rem;
   }
 }

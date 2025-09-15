@@ -26,7 +26,6 @@ const TelaDoDia = ({ lado = "left" }) => {
 
   if (!diaInfo) return <p>Dia não encontrado</p>;
 
-  // kits do dia
   const kitsDoDia = kits.filter((k) => k.dia === diaAtual);
 
   const [statusKits, setStatusKits] = useState(
@@ -66,8 +65,22 @@ const TelaDoDia = ({ lado = "left" }) => {
 
         <main>
           <div className="contadores">
-            <h2>Disponíveis: {disponiveis}</h2>
-            <h2>Indisponíveis: {indisponiveis}</h2>
+            <div className="contador-disponiveis">
+              <h2>
+                <span className="numero">
+                  {disponiveis < 10 ? `0${disponiveis}` : disponiveis}
+                </span>
+                Kits disponíveis
+              </h2>
+            </div>
+            <div className="contador-indisponiveis">
+              <h2>
+                <span className="numero">
+                  {indisponiveis < 10 ? `0${indisponiveis}` : indisponiveis}
+                </span>
+                Kits sujos
+              </h2>
+            </div>
           </div>
 
           {kitsDoDia.length > 0 ? (
