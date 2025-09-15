@@ -1,0 +1,22 @@
+.tela-do-dia {
+  display: flex;
+  gap: 2em;
+}
+
+.tela-do-dia-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  header {
+    width: fit-content;
+    justify-content: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+}

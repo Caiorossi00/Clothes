@@ -1,0 +1,40 @@
+.side-card {
+  height: 100vh;
+  width: 35vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.dia {
+  font-size: 10em;
+  writing-mode: vertical-rl;
+  text-align: center;
+  color: #fff;
+  transform: rotate(180deg);
+  font-family: "poppins";
+  font-weight: bold;
+  letter-spacing: -15px;
+}

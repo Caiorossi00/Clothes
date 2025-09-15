@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nome": "Conjunto A",
+    "top": {
+      "tipo": "camiseta",
+      "cor": "azul",
+      "imagem": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "bottom": {
+      "tipo": "short",
+      "cor": "preto",
+      "imagem": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.3achekpDt3OXO_mbkM25CgHaGX%3Fpid%3DApi&f=1&ipt=a9d5e7219fe34751971363246fc8a34fef497d29ed8cf66ca684d76a2567e94a"
+    },
+    "status": "disponível",
+    "dia": "segunda"
+  },
+  {
+    "id": 2,
+    "nome": "Conjunto B",
+    "top": {
+      "tipo": "camiseta",
+      "cor": "vermelha",
+      "imagem": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "bottom": {
+      "tipo": "calça",
+      "cor": "cinza",
+      "imagem": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.3achekpDt3OXO_mbkM25CgHaGX%3Fpid%3DApi&f=1&ipt=a9d5e7219fe34751971363246fc8a34fef497d29ed8cf66ca684d76a2567e94a"
+    },
+    "status": "disponível",
+    "dia": "terça"
+  },
+  {
+    "id": 3,
+    "nome": "Conjunto C",
+    "top": {
+      "tipo": "camiseta",
+      "cor": "preta",
+      "imagem": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "bottom": {
+      "tipo": "short",
+      "cor": "azul",
+      "imagem": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.3achekpDt3OXO_mbkM25CgHaGX%3Fpid%3DApi&f=1&ipt=a9d5e7219fe34751971363246fc8a34fef497d29ed8cf66ca684d76a2567e94a"
+    },
+    "status": "disponível",
+    "dia": "quarta"
+  }
+]
