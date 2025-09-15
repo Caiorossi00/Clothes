@@ -2,20 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.kit-top img {
-  width: 325px;
-  height: auto;
-  margin-left: 20px;
-}
+  &.indisponivel {
+    opacity: 0.5;
+  }
 
-.kit-bottom img {
-  width: 220px;
-  height: auto;
-  margin-top: -30px;
-}
+  .imagens-kit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+    gap: 1em;
 
-.kit-info {
-  display: none;
+    .top {
+      width: 265px;
+      height: auto;
+      z-index: 2;
+    }
+
+    .bottom {
+      width: 220px;
+      height: auto;
+      z-index: 1;
+      z-index: 3;
+    }
+  }
 }

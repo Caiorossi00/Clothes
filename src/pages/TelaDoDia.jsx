@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import SideCard from "../components/SideCard";
 import WeekCalendar from "../components/WeekCalendar";
 import CardKit from "../components/CardKit";
 import Usado from "../components/Usado";
 import IconBar from "../components/IconBar";
 import diasDaSemana from "../data/diasDaSemana.json";
+import kits from "../data/kits.json";
 import "../assets/styles/TelaDoDia.scss";
 
 const nomesDias = [
@@ -25,6 +26,30 @@ const TelaDoDia = ({ lado = "left" }) => {
 
   if (!diaInfo) return <p>Dia não encontrado</p>;
 
+  // kits do dia
+  const kitsDoDia = kits.filter((k) => k.dia === diaAtual);
+
+  const [statusKits, setStatusKits] = useState(
+    kitsDoDia.reduce((acc, kit) => {
+      acc[kit.id] = kit.status;
+      return acc;
+    }, {})
+  );
+
+  const toggleStatus = (id) => {
+    setStatusKits({
+      ...statusKits,
+      [id]: statusKits[id] === "disponível" ? "indisponível" : "disponível",
+    });
+  };
+
+  const disponiveis = kitsDoDia.filter(
+    (k) => statusKits[k.id] === "disponível"
+  ).length;
+  const indisponiveis = kitsDoDia.filter(
+    (k) => statusKits[k.id] === "indisponível"
+  ).length;
+
   return (
     <div className="tela-do-dia">
       <SideCard
@@ -40,18 +65,24 @@ const TelaDoDia = ({ lado = "left" }) => {
         </header>
 
         <main>
-          <div>
-            <h1>Contador de disponíveis em kits</h1>
-            <h1>Contador de indisponíveis em kits</h1>
+          <div className="contadores">
+            <h2>Disponíveis: {disponiveis}</h2>
+            <h2>Indisponíveis: {indisponiveis}</h2>
           </div>
 
-          {diaInfo.kits.length > 0 ? (
-            diaInfo.kits.map((kitId) => <CardKit key={kitId} id={kitId} />)
+          {kitsDoDia.length > 0 ? (
+            kitsDoDia.map((kit) => (
+              <CardKit key={kit.id} kit={kit} status={statusKits[kit.id]} />
+            ))
           ) : (
             <p>Nenhum kit atribuído para hoje.</p>
           )}
 
-          <Usado />
+          <Usado
+            diaAtual={diaAtual}
+            statusKits={statusKits}
+            toggleStatus={toggleStatus}
+          />
         </main>
 
         <footer>
