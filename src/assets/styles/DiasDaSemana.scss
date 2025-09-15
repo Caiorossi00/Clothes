@@ -1,0 +1,45 @@
+.week-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dia-bloco {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "poppins", sans-serif;
+  letter-spacing: -5px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nome-dia {
+  font-size: 5em;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  z-index: 1;
+  margin: 0 auto;
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
