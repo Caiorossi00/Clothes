@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import SideCard from "../components/SideCard";
 import WeekCalendar from "../components/WeekCalendar";
 import CardKit from "../components/CardKit";
@@ -19,9 +20,11 @@ const nomesDias = [
 ];
 
 const TelaDoDia = ({ lado = "left" }) => {
+  const { dia } = useParams();
   const hojeIndex = new Date().getDay();
-  const diaAtual = nomesDias[hojeIndex];
+  const diaDeHoje = nomesDias[hojeIndex];
 
+  const diaAtual = dia || diaDeHoje;
   const diaInfo = diasDaSemana[diaAtual];
 
   if (!diaInfo) return <p>Dia não encontrado</p>;
@@ -55,7 +58,7 @@ const TelaDoDia = ({ lado = "left" }) => {
         lado={lado}
         dia={diaAtual}
         imagem={diaInfo.imagem}
-        hoje={true}
+        hoje={!dia}
       />
 
       <div className="tela-do-dia-right">

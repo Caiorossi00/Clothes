@@ -24,18 +24,18 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.nome-dia {
+.dia-bloco .nome-dia {
   font-size: 5em;
   color: white;
   text-transform: capitalize;
   font-weight: bold;
-  z-index: 1;
+  z-index: 92;
   margin: 0 auto;
   transition: transform 0.4s ease;
 
