@@ -15,8 +15,9 @@ const DiasDaSemana = () => {
           style={{ backgroundImage: `url(${info.imagem})` }}
           onClick={() => navigate(`/dias/${nome}`)}
         >
-          <div className="overlay"></div>
-          <h2 className="nome-dia">{nome}</h2>
+          <div className="overlay">
+            <h2 className="nome-dia">{nome}</h2>
+          </div>
         </div>
       ))}
     </div>
