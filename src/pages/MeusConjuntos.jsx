@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import initialKits from "../data/kits";
+import IconBar from "../components/IconBar";
 import "../assets/styles/MeusConjuntos.scss";
 
 const coresCamiseta = ["azul", "vermelha", "preta", "branca"];
@@ -110,6 +111,8 @@ const MeusConjuntos = () => {
           </div>
         ))}
       </div>
+
+      <IconBar />
     </div>
   );
 };
